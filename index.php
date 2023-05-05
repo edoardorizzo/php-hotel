@@ -11,28 +11,32 @@
 
 <body>
     <form action="myscript.php" method="POST">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Descrizione</th>
-                    <th>Parcheggio</th>
-                    <th>Voto</th>
-                    <th>Distanza dal centro</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($hotels as $hotel) : ?>
+        <div class="container">
+            <table class="table">
+                <thead>
                     <tr>
-                        <td><?php echo $hotel['name']; ?></td>
-                        <td><?php echo $hotel['description']; ?></td>
-                        <td><?php echo $hotel['parking'] ? 'Si' : 'No'; ?></td>
-                        <td><?php echo $hotel['vote']; ?></td>
-                        <td><?php echo $hotel['distance_to_center']; ?> km</td>
+                        <th>Nome</th>
+                        <th>Descrizione</th>
+                        <th>Parcheggio</th>
+                        <th>Voto</th>
+                        <th>Distanza dal centro</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php include 'myscript.php'; foreach ($hotels as $hotel) : ?>
+                        <tr>
+                            <td><?php echo $hotel['name']; ?></td>
+                            <td><?php echo $hotel['description']; ?></td>
+                            <td><?php echo $hotel['parking'] ? 'Si' : 'No'; ?></td>
+                            <td><?php echo $hotel['vote']; ?></td>
+                            <td><?php echo $hotel['distance_to_center']; ?> km</td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <input class="me-1" type="checkbox" name="" id="parking_yes"><label for=""> Mostra solo Hotel con parcheggio </label>
+
+        </div>
     </form>
 
 

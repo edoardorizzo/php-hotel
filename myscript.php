@@ -40,12 +40,4 @@ $hotels = [
 
 ];
 
-// foreach ($hotels as $hotel) {
-//     echo '<p><strong>' . $hotel['name'] . '</strong></p>';
-//     echo '<p>' . $hotel['description'] . '</p>';
-//     echo '<p>Parcheggio: ' . ($hotel['parking'] ? 'Si' : 'No') . '</p>';
-//     echo '<p>Voto: ' . $hotel['vote'] . '</p>';
-//     echo '<p>Distanza dal centro: ' . $hotel['distance_to_center'] . ' km</p>';
-// }
-
 ?>
